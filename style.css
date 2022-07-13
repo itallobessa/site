@@ -312,12 +312,97 @@ header{
 }
 
 .conhecimentos-img-wrapper{
-    grid-column: 7 / 11;
+    grid-column: 8 / 11;
     grid-row: 2 / 6;
-    width: 100%;
+    width: 90%;
 }
 
 .conhecimentos-img-wrapper img{
     object-fit: cover;
+    width: 90%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+}
+
+.card-img-wrapper{
     width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .7s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5;
+}
+
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
+    transition: all .7s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 500;
+    color: #dba510;
+}
+
+.card-info h3{
+    font-family: var(--font-action);
+    font-weight: bolder;
+    color: #e21d1d;
+    margin-bottom: .5rem;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: #ffffff;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021b79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6);
+    font-family: var(--font-action);
+    font-size: 1rem;
+    color: #ffffff;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+}
+
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
